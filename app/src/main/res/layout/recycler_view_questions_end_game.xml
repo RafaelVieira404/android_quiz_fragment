@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/fragment_end_game_activity"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/question_format_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rectangle_round_corners"
+
+        >
+
+
+
+        <TextView
+            android:id="@+id/question_endGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="Em the bigBangTheory qual o nome do personagem que diz Bazinga!"
+
+            />
+
+        <TextView
+            android:id="@+id/question_answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question_endGame"
+            android:layout_alignStart="@+id/question_endGame"
+            android:ellipsize="marquee"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="teste" />
+
+        <TextView
+            android:id="@+id/question_answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question_answer1"
+            android:layout_alignStart="@+id/question_endGame"
+            android:ellipsize="marquee"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="teste" />
+
+        <TextView
+            android:id="@+id/question_answer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question_answer2"
+            android:layout_alignStart="@+id/question_endGame"
+            android:ellipsize="marquee"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="teste" />
+
+        <TextView
+            android:id="@+id/question_answer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question_answer3"
+            android:layout_alignStart="@+id/question_endGame"
+            android:ellipsize="marquee"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            tools:text="teste" />
+
+        <TextView
+            android:id="@+id/user_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question_answer4"
+            android:layout_alignStart="@+id/question_endGame"
+            android:layout_marginTop="10dp"
+            android:ellipsize="marquee"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="questao asdasdad"
+
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/round_button"
+        tools:text="aaaaa"
+        android:layout_alignBottom="@id/question_format_display"
+        android:layout_alignEnd="@id/question_format_display"
+
+        />
+
+</RelativeLayout>

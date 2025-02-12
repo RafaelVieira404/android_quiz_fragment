@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_fragment"
 
     >
 
@@ -13,7 +14,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/background_main_title"
-        android:backgroundTint="@color/black">
+        android:backgroundTint="@color/white">
     </RelativeLayout>
 
     <RelativeLayout
@@ -21,16 +22,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_title"
-        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/main_title"
         android:layout_alignEnd="@+id/main_title"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="6dp"
         android:background="@drawable/background_main_body"
-        android:backgroundTint="@color/black"
-        android:layout_marginTop="10dp"
-        >
-        </RelativeLayout>
+        android:backgroundTint="@color/white"></RelativeLayout>
 
-        <Button
+    <Button
             android:id="@+id/left_bottom_button_main"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
