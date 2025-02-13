@@ -3,31 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_fragment"
+    android:paddingBottom="8dp"
 
     >
 
-    <RelativeLayout
-        android:id="@+id/main_title"
+    <LinearLayout
+        android:id="@+id/game_start"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/background_main_title"
-        android:backgroundTint="@color/white">
-    </RelativeLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
 
     <RelativeLayout
         android:id="@+id/main_body"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_title"
-        android:layout_alignStart="@+id/main_title"
-        android:layout_alignEnd="@+id/main_title"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="6dp"
         android:background="@drawable/background_main_body"
-        android:backgroundTint="@color/white"></RelativeLayout>
+        android:backgroundTint="@color/white">
+
+    </RelativeLayout>
 
     <Button
             android:id="@+id/left_bottom_button_main"
@@ -35,9 +31,9 @@
             android:layout_alignParentBottom="true"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/round_button"
             >
         </Button>
@@ -47,22 +43,22 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/round_button"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_toEndOf="@+id/left_bottom_button_main"
             >
         </Button>
         <Button
-            android:id="@+id/right_bottom_button_main"
+            android:id="@+id/start_bottom_button_main"
             android:layout_alignParentBottom="true"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@drawable/round_button"
             android:layout_toEndOf="@id/center_bottom_button_main"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_alignParentEnd="true"
             >
         </Button>
