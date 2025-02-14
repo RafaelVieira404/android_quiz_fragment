@@ -23,17 +23,5 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.container_root, new MainScreenFragment()).commit();
     }
-
-
-    public final void getMainFragment() {
-        getSupportFragmentManager().beginTransaction()
-                .add(android.R.id.content, new MainScreenFragment(), "main")
-                .addToBackStack(null)
-                .commit();
-    }
-
-
-
-
 }
 
