@@ -31,18 +31,15 @@ public class MainScreenFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getAleatoryNumbers();
-        savingDataBundle();
         setup(view);
-
-
-
     }
 
     public void setup(View view){
+
         Button start_game = view.findViewById(R.id.start_bottom_button_main);
         start_game.setOnClickListener(v -> {
             FragmentTransaction fr = this.getParentFragmentManager().beginTransaction();
-            fr.replace(R.id.container_root, GameScreenFragment.newInstance(), "game");
+            fr.replace(R.id.container_root, GameScreenFragment.newInstance(indexQuestion, correctAnswerCount, questionCount), "game");
             fr.addToBackStack("game");
             fr.commit();
         });
@@ -63,11 +60,7 @@ public class MainScreenFragment extends Fragment {
     }
 
     public void savingDataBundle() {
-        Bundle bundle = new Bundle();
-        bundle.putIntArray("indexQuestion", indexQuestion);
-        bundle.putInt("correctAnswerCount", correctAnswerCount);
-        bundle.putInt("questionCount", questionCount);
-        GameScreenFragment.newInstance().setArguments(bundle);
+
     }
 
     public void getAleatoryNumbers() {

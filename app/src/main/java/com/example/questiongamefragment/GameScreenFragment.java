@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,8 +24,14 @@ public class GameScreenFragment extends Fragment {
     private int correctAnswerCount = 0;
     private ParcelableGame currentQuestion;
 
-    public static GameScreenFragment newInstance() {
-        return new GameScreenFragment();
+    public static GameScreenFragment newInstance(int[] indexQuestion, int correctAnswerCount, int questionCount) {
+        Bundle bundle = new Bundle();
+        bundle.putIntArray("indexQuestion", indexQuestion);
+        bundle.putInt("correctAnswerCount", correctAnswerCount);
+        bundle.putInt("questionCount", questionCount);
+        GameScreenFragment gameScreenFragment = new GameScreenFragment();
+        gameScreenFragment.setArguments(bundle);
+        return gameScreenFragment;
     }
 
     View view;
@@ -59,52 +64,58 @@ public class GameScreenFragment extends Fragment {
 
         question_text.setText(GameQuestions.getInstance().getQuestions(indexQuestion[questionCount]).getQuestionGame());
 
+        currentQuestion = GameQuestions.getInstance().getQuestions(indexQuestion[questionCount]);
+
         radio_button1.setText(GameQuestions.getInstance().getQuestions(indexQuestion[questionCount]).getQuestionOptionOne());
         radio_button2.setText(GameQuestions.getInstance().getQuestions(indexQuestion[questionCount]).getQuestionOptionTwo());
         radio_button3.setText(GameQuestions.getInstance().getQuestions(indexQuestion[questionCount]).getQuestionOptionThree());
         radio_button4.setText(GameQuestions.getInstance().getQuestions(indexQuestion[questionCount]).getQuestionOptionFour());
 
         next_question.setOnClickListener(v -> {
-            if (!answerValidation()) return;
-            if (questionCount >= indexQuestion.length){
-                navigateToEndGameFragment();
-            }
-            nextQuestionFragment();
+            if (!answerValidation(view)) return;
+            if (questionCount >= indexQuestion.length) navigateToEndGameFragment();
+            else nextQuestionFragment();
         });
 
 
     }
 
-        private boolean answerValidation() {
+        private boolean answerValidation(View view) {
             RadioGroup radioGroup = view.findViewById(R.id.radio_group);
+            int isChecked = radioGroup.getCheckedRadioButtonId();
 
-            if (radioGroup.getCheckedRadioButtonId() == R.id.game_activity_radio_top){
-                if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionOne()) currentQuestion.setIsUserCorrectAnswer(true);
-                currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionOne());
-                questionCount += 1;
-                return true;
-            }
-            if (radioGroup.getCheckedRadioButtonId() == R.id.game_activity_radio_below_top){
-                if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionTwo()) currentQuestion.setIsUserCorrectAnswer(true);
-                currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionTwo());
-                questionCount += 1;
-                return true;
+                if (isChecked == R.id.game_activity_radio_top) {
+                    if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionOne())
+                        currentQuestion.setIsUserCorrectAnswer(true);
+                    currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionOne());
+                    questionCount+= 1;
+                    return true;
+                }
+                if (isChecked == R.id.game_activity_radio_below_top) {
+                    if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionTwo())
+                        currentQuestion.setIsUserCorrectAnswer(true);
+                    currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionTwo());
+                    questionCount+= 1;
+                    return true;
 
-            }
-            if (radioGroup.getCheckedRadioButtonId() == R.id.game_activity_radio_above_bottom){
-                if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionThree()) currentQuestion.setIsUserCorrectAnswer(true);
-                currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionThree());
-                questionCount += 1;
-                return true;
+                }
+                if (isChecked == R.id.game_activity_radio_above_bottom) {
+                    if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionThree())
+                        currentQuestion.setIsUserCorrectAnswer(true);
+                    currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionThree());
+                    questionCount+= 1;
+                    return true;
+                }
+                if (isChecked == R.id.game_activity_radio_bottom) {
+                    if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionThree())
+                        currentQuestion.setIsUserCorrectAnswer(true);
+                    currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionThree());
+                    questionCount+= 1;
+                    return true;
 
-            }
-            if (radioGroup.getCheckedRadioButtonId() == R.id.game_activity_radio_bottom){
-                if (currentQuestion.getQuestionAnswer() == currentQuestion.getQuestionOptionThree()) currentQuestion.setIsUserCorrectAnswer(true);
-                currentQuestion.setUserSelectedAnswer(currentQuestion.getQuestionOptionThree());
-                questionCount += 1;
-                return true;
-
-            } else return false;
+                } else {
+                    return false;
+                }
 
         }
 
@@ -121,9 +132,8 @@ public class GameScreenFragment extends Fragment {
     }
 
     public void nextQuestionFragment() {
-        savingDataBundle();
         FragmentTransaction fr = this.getParentFragmentManager().beginTransaction();
-        fr.replace(R.id.container_root, newInstance(), "game");
+        fr.add(R.id.container_root, newInstance(indexQuestion,correctAnswerCount,questionCount), "game");
         fr.addToBackStack("game");
         fr.commit();
 
@@ -134,7 +144,7 @@ public class GameScreenFragment extends Fragment {
         bundle.putIntArray("indexQuestion", indexQuestion);
         bundle.putInt("correctAnswerCount", correctAnswerCount);
         bundle.putInt("questionCount", questionCount);
-        newInstance().setArguments(bundle);
+        new GameScreenFragment().setArguments(bundle);
     }
 
     public void navigateToEndGameFragment() {
