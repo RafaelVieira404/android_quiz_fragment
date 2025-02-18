@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:showIn="@layout/fragment_end_game_activity"
+    android:id="@+id/main_frame"
     >
 
 
@@ -20,11 +21,15 @@
         >
 
 
-
         <TextView
             android:id="@+id/question_endGame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/square_round_top"
+            android:backgroundTint="@color/black"
             android:textColor="@color/black"
             android:textSize="20sp"
             tools:text="Em the bigBangTheory qual o nome do personagem que diz Bazinga!"
@@ -37,6 +42,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/question_endGame"
             android:layout_alignStart="@+id/question_endGame"
+            android:background="@color/black"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingHorizontal="4dp"
+
             android:ellipsize="marquee"
             android:textColor="@color/black"
             android:textSize="17sp"
@@ -48,6 +58,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/question_answer1"
             android:layout_alignStart="@+id/question_endGame"
+            android:background="@color/black"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingHorizontal="4dp"
+
             android:ellipsize="marquee"
             android:textColor="@color/black"
             android:textSize="17sp"
@@ -58,6 +73,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/question_answer2"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingHorizontal="4dp"
+            android:background="@color/black"
             android:layout_alignStart="@+id/question_endGame"
             android:ellipsize="marquee"
             android:textColor="@color/black"
@@ -69,6 +88,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/question_answer3"
+            android:background="@drawable/square_round_bottom"
+            android:paddingBottom="8dp"
+            android:paddingHorizontal="4dp"
+
+            android:backgroundTint="@color/black"
             android:layout_alignStart="@+id/question_endGame"
             android:ellipsize="marquee"
             android:textColor="@color/black"
@@ -77,11 +101,14 @@
 
         <TextView
             android:id="@+id/user_answer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/question_answer4"
             android:layout_alignStart="@+id/question_endGame"
-            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_round_corners"
+            android:backgroundTint="@color/black"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="4dp"
             android:ellipsize="marquee"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -91,14 +118,14 @@
     </RelativeLayout>
 
 
-    <TextView
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/round_button"
-        tools:text="aaaaa"
-        android:layout_alignBottom="@id/question_format_display"
-        android:layout_alignEnd="@id/question_format_display"
+<!--    <ImageView-->
+<!--        android:id="@+id/image_validation"-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:background="@drawable/round_button"-->
+<!--        tools:text="aaaaa"-->
+<!--        android:layout_alignParentStart="true"-->
 
-        />
+<!--        />-->
 
 </RelativeLayout>

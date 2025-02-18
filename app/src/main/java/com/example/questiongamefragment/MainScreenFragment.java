@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class MainScreenFragment extends Fragment {
 
-    private int[] indexQuestion = new int[10];
+    private int[] indexQuestion = new int[5];
     private int questionCount = 0;
     private int correctAnswerCount = 0;
     private Random random = new Random();
@@ -66,13 +66,13 @@ public class MainScreenFragment extends Fragment {
     public void getAleatoryNumbers() {
 
         for (int i = 0; i < indexQuestion.length; i += 1) {
-            indexQuestion[i] += random.nextInt(20);
+            indexQuestion[i] += random.nextInt(22);
         }
 
         for (int i = 0; i < indexQuestion.length; i += 1) {
-            for (int a = i += 1; a <= i; a += 1) {
+            for (int a = 1 + i; a < indexQuestion.length; a += 1) {
                 if (indexQuestion[i] == indexQuestion[a]) {
-                    indexQuestion[i] += random.nextInt(20);
+                    indexQuestion[i] = random.nextInt(22);
                 }
             }
         }

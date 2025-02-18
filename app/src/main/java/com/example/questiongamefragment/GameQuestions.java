@@ -22,7 +22,7 @@ public class GameQuestions implements Parcelable {
                 "Chandler Jason Bing",
                 "Chandler Michael Bing",
                 "Chandler Muriel Bing",
-                null,
+                "answer",
                 false
         ));
 
@@ -33,7 +33,7 @@ public class GameQuestions implements Parcelable {
                 "Chicago",
                 "Nova York",
                 "Nova York",
-                null,
+                "answer",
                 false
         ));
 
@@ -44,7 +44,7 @@ public class GameQuestions implements Parcelable {
                 "Paleontólogo",
                 "Astrônomo",
                 "Paleontólogo",
-                null,
+                "answer",
                 false
         ));
 
@@ -55,7 +55,7 @@ public class GameQuestions implements Parcelable {
                 "The Coffee Spot",
                 "The One Coffee Shop",
                 "Central Perk",
-                null,
+                "answer",
                 false
         ));
 
@@ -66,7 +66,7 @@ public class GameQuestions implements Parcelable {
                 "Phoebe",
                 "Janice",
                 "Rachel",
-                null,
+                "answer",
                 false
         ));
 
@@ -77,7 +77,7 @@ public class GameQuestions implements Parcelable {
                 "The One with Ross's Sandwich",
                 "The One with the Thanksgiving Flashbacks",
                 "The One with the Jellyfish",
-                null,
+                "answer",
                 false
         ));
 
@@ -88,7 +88,7 @@ public class GameQuestions implements Parcelable {
                 "The Princess Diaries",
                 "The One with the Cop",
                 "The Wedding Singer",
-                null,
+                "answer",
                 false
         ));
 
@@ -99,7 +99,7 @@ public class GameQuestions implements Parcelable {
                 "Rachel",
                 "Julie",
                 "Susan",
-                null,
+                "answer",
                 false
         ));
 
@@ -110,7 +110,7 @@ public class GameQuestions implements Parcelable {
                 "Monica",
                 "Phoebe",
                 "Ross",
-                null,
+                "answer",
                 false
         ));
 
@@ -121,7 +121,7 @@ public class GameQuestions implements Parcelable {
                 "Rocco",
                 "Milo",
                 "Marcel",
-                null,
+                "answer",
                 false
         ));
 
@@ -132,7 +132,7 @@ public class GameQuestions implements Parcelable {
                 "Ross",
                 "Chandler",
                 "Ross",
-                null,
+                "answer",
                 false
         ));
 
@@ -143,7 +143,7 @@ public class GameQuestions implements Parcelable {
                 "Temporada 6",
                 "Temporada 7",
                 "Temporada 4",
-                null,
+                "answer",
                 false
         ));
 
@@ -154,7 +154,7 @@ public class GameQuestions implements Parcelable {
                 "Judy",
                 "Helen",
                 "Judy",
-                null,
+                "answer",
                 false
         ));
 
@@ -165,7 +165,7 @@ public class GameQuestions implements Parcelable {
                 "I’ll Be There for You",
                 "New York, New York",
                 "Smelly Cat",
-                null,
+                "answer",
                 false
         ));
 
@@ -176,7 +176,7 @@ public class GameQuestions implements Parcelable {
                 "Rachel",
                 "Joey",
                 "Joey",
-                null,
+                "answer",
                 false
         ));
 
@@ -187,7 +187,7 @@ public class GameQuestions implements Parcelable {
                 "Paul",
                 "David",
                 "Barry",
-                null,
+                "answer",
                 false
         ));
 
@@ -198,7 +198,7 @@ public class GameQuestions implements Parcelable {
                 "Monica",
                 "Rachel",
                 "Monica",
-                null,
+                "answer",
                 false
         ));
 
@@ -209,7 +209,7 @@ public class GameQuestions implements Parcelable {
                 "Eles ficaram juntos por muito tempo",
                 "Eles nunca se beijaram",
                 "Eles se separaram rapidamente",
-                null,
+                "answer",
                 false
         ));
 
@@ -220,7 +220,7 @@ public class GameQuestions implements Parcelable {
                 "No set de filmagens",
                 "Com uma mulher",
                 "Com uma mulher",
-                null,
+                "answer",
                 false
         ));
 
@@ -231,7 +231,7 @@ public class GameQuestions implements Parcelable {
                 "Chicago",
                 "Rent",
                 "Cats",
-                null,
+                "answer",
                 false
         ));
 
@@ -242,7 +242,7 @@ public class GameQuestions implements Parcelable {
                 "Mel's Diner",
                 "The One Restaurant",
                 "Moon Dance Diner",
-                null,
+                "answer",
                 false
         ));
 
@@ -253,7 +253,7 @@ public class GameQuestions implements Parcelable {
                 "Joey",
                 "Phoebe",
                 "Chandler",
-                null,
+                "answer",
                 false
         ));
     }
