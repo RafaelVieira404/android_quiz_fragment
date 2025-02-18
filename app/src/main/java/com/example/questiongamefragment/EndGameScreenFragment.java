@@ -8,8 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class EndGameScreenFragment extends Fragment {
+
+    private static ParcelableGame quizQuestions;
+    private final ArrayList<ParcelableGame> questionQuiz = new ArrayList<>();
+
+    private int[] indexQuestion;
+    private int correctAnswerCount;
+
 
     public static EndGameScreenFragment endGameInstance(int[] indexQuestion, int correctAnswerCount) {
         Bundle bundle = new Bundle();
@@ -34,4 +44,21 @@ public class EndGameScreenFragment extends Fragment {
     public void setupScreen() {
 
     }
+
+    public void getQuestionsSetup() {
+        for (int i = 0; i < 10; i += 1) {
+            quizQuestions = GameQuestions.getInstance().getQuestions(indexQuestion[i]);
+            questionQuiz.add(quizQuestions);
+        }
+    }
+
+
+
+    private void recyclerSetup(View view) {
+        questionAdapter = new QuestionAdapter(questionQuiz);
+        RecyclerView recyclerView = view.findViewById(R.id.recycler_layout);
+        recyclerView.setAdapter(questionAdapter);
+    }
+
+
 }
