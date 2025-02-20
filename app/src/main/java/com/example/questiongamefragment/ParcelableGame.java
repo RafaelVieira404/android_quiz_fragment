@@ -103,6 +103,9 @@ public class ParcelableGame implements Parcelable {
     public String getUserSelectedAnswer() {
         return userSelectedAnswer;
     }
+    public boolean getIsUserCorrectAnswer() {
+        return isUserCorrectAnswer;
+    }
 
     public void setIsUserCorrectAnswer(Boolean isUserCorrectAnswer){
         this.isUserCorrectAnswer = isUserCorrectAnswer;

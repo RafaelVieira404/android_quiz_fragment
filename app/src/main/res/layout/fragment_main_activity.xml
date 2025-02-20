@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_fragment"
-    android:paddingBottom="8dp"
+    android:background="@drawable/teste"
 
     >
 
@@ -11,63 +11,53 @@
         android:id="@+id/game_start"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"/>
+        android:orientation="vertical" />
 
-
-    <RelativeLayout
-        android:id="@+id/main_body"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ImageButton
+        android:id="@+id/left_bottom_button_main"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/background_main_body"
-        android:backgroundTint="@color/white">
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#45a5bb"
+        android:src="@drawable/baseline_settings_24"
 
-    </RelativeLayout>
+        ></ImageButton>
 
-    <Button
-            android:id="@+id/left_bottom_button_main"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/round_button"
-            >
-        </Button>
-        <Button
-            android:id="@+id/center_bottom_button_main"
-            android:layout_alignParentBottom="true"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/round_button"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toEndOf="@+id/left_bottom_button_main"
-            >
-        </Button>
-        <Button
-            android:id="@+id/start_bottom_button_main"
-            android:layout_alignParentBottom="true"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/round_button"
-            android:layout_toEndOf="@id/center_bottom_button_main"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_alignParentEnd="true"
-            >
-        </Button>
+    <ImageButton
+        android:id="@+id/center_bottom_button_main"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@+id/left_bottom_button_main"
+        android:background="@drawable/round_button"
+        android:src="@drawable/baseline_library_books_24"
+        android:backgroundTint="#42a2bb">
 
+    </ImageButton>
 
+    <ImageButton
+        android:id="@+id/start_bottom_button_main"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/center_bottom_button_main"
+        android:background="@drawable/round_button"
+        android:src="@drawable/baseline_play_arrow_24"
+        android:backgroundTint="#42a2bb">
 
-
-
-
+    </ImageButton>
 
 
 </RelativeLayout>

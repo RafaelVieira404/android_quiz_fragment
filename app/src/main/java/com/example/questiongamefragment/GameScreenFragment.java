@@ -1,7 +1,6 @@
 package com.example.questiongamefragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -158,4 +157,13 @@ public class GameScreenFragment extends Fragment {
         fr.commit();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        try {
+            finalize();
+        } catch (Throwable e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

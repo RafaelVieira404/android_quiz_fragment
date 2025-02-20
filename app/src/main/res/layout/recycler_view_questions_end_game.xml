@@ -2,130 +2,135 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:showIn="@layout/fragment_end_game_activity"
-    android:id="@+id/main_frame"
-    >
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_frame">
 
-
-    <RelativeLayout
-        android:id="@+id/question_format_display"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/rectangle_round_corners"
-
+        android:backgroundTint="@color/white"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="15dp"
         >
 
-
-        <TextView
-            android:id="@+id/question_endGame"
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:id="@+id/question_format_display"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="4dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:background="@drawable/square_round_top"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            tools:text="Em the bigBangTheory qual o nome do personagem que diz Bazinga!"
-
-            />
-
-        <TextView
-            android:id="@+id/question_answer1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/question_endGame"
-            android:layout_alignStart="@+id/question_endGame"
-            android:background="@color/black"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingHorizontal="4dp"
-
-            android:ellipsize="marquee"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            tools:text="teste" />
-
-        <TextView
-            android:id="@+id/question_answer2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/question_answer1"
-            android:layout_alignStart="@+id/question_endGame"
-            android:background="@color/black"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingHorizontal="4dp"
-
-            android:ellipsize="marquee"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            tools:text="teste" />
-
-        <TextView
-            android:id="@+id/question_answer3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/question_answer2"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingHorizontal="4dp"
-            android:background="@color/black"
-            android:layout_alignStart="@+id/question_endGame"
-            android:ellipsize="marquee"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            tools:text="teste" />
-
-        <TextView
-            android:id="@+id/question_answer4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/question_answer3"
-            android:background="@drawable/square_round_bottom"
-            android:paddingBottom="8dp"
-            android:paddingHorizontal="4dp"
-
-            android:backgroundTint="@color/black"
-            android:layout_alignStart="@+id/question_endGame"
-            android:ellipsize="marquee"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            tools:text="teste" />
-
-        <TextView
-            android:id="@+id/user_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/question_answer4"
-            android:layout_alignStart="@+id/question_endGame"
-            android:background="@drawable/rectangle_round_corners"
-            android:backgroundTint="@color/black"
-            android:layout_marginTop="8dp"
-            android:paddingHorizontal="4dp"
-            android:ellipsize="marquee"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            tools:text="questao asdasdad"
-
-            />
-    </RelativeLayout>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/image_validation"-->
-<!--        android:layout_width="35dp"-->
-<!--        android:layout_height="35dp"-->
-<!--        android:background="@drawable/round_button"-->
-<!--        tools:text="aaaaa"-->
-<!--        android:layout_alignParentStart="true"-->
+            >
 
-<!--        />-->
+
+            <TextView
+                android:id="@+id/question_endGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                tools:text="Em the bigBangTheory qual o nome do personagem que diz Bazinga!"
+
+                />
+
+            <TextView
+                android:id="@+id/question_answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question_endGame"
+                android:layout_alignStart="@+id/question_endGame"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="4dp"
+
+                android:ellipsize="marquee"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="teste" />
+
+            <TextView
+                android:id="@+id/question_answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question_answer1"
+                android:layout_alignStart="@+id/question_endGame"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="4dp"
+
+                android:ellipsize="marquee"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="teste" />
+
+            <TextView
+                android:id="@+id/question_answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question_answer2"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingHorizontal="4dp"
+                android:layout_alignStart="@+id/question_endGame"
+                android:ellipsize="marquee"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="teste" />
+
+            <TextView
+                android:id="@+id/question_answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question_answer3"
+                android:paddingBottom="8dp"
+                android:paddingHorizontal="4dp"
+                android:layout_alignStart="@+id/question_endGame"
+                android:ellipsize="marquee"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                tools:text="teste" />
+
+            <TextView
+                android:id="@+id/user_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question_answer4"
+                android:layout_alignStart="@+id/question_endGame"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/rectangle_round_corners"
+                android:backgroundTint="#FFF5EE"
+                android:ellipsize="marquee"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="6dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+
+                tools:text="Questao asdasdad" />
+        </RelativeLayout>
+
+
+        <!--    <ImageView-->
+        <!--        android:id="@+id/image_validation"-->
+        <!--        android:layout_width="35dp"-->
+        <!--        android:layout_height="35dp"-->
+        <!--        android:background="@drawable/round_button"-->
+        <!--        tools:text="aaaaa"-->
+        <!--        android:layout_alignParentStart="true"-->
+
+        <!--        />-->
+
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>

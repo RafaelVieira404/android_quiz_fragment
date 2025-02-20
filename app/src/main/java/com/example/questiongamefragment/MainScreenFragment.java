@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.Random;
 
@@ -36,7 +37,7 @@ public class MainScreenFragment extends Fragment {
 
     public void setup(View view){
 
-        Button start_game = view.findViewById(R.id.start_bottom_button_main);
+        ImageButton start_game = view.findViewById(R.id.start_bottom_button_main);
         start_game.setOnClickListener(v -> {
             FragmentTransaction fr = this.getParentFragmentManager().beginTransaction();
             fr.replace(R.id.container_root, GameScreenFragment.newInstance(indexQuestion, correctAnswerCount, questionCount), "game");
@@ -59,14 +60,14 @@ public class MainScreenFragment extends Fragment {
 //        });
     }
 
-    public void savingDataBundle() {
+    public void refreshContent() {
 
     }
 
     public void getAleatoryNumbers() {
 
         for (int i = 0; i < indexQuestion.length; i += 1) {
-            indexQuestion[i] += random.nextInt(22);
+            indexQuestion[i] = random.nextInt(22);
         }
 
         for (int i = 0; i < indexQuestion.length; i += 1) {
